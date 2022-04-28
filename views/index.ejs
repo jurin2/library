@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/defualt.css">
+<title>도서 조회</title>
+<style>
+  .sec{
+    padding: 15px;
+  }
+  .list-group{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 2fr 3fr 0.7fr 1fr 1.3fr;
+  }
+  .list-group li{
+    text-align: center;
+  }
+  .btn{
+    border-radius: 0;
+  }
+  .list-group-item{
+    padding: 0;
+    font-size: 15px;
+    line-height: 72px;
+  }
+</style>
+</head>
+<body>
+    <div class="wrap">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">연희도서관</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">조회</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/write">등록</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </nav>
+
+      <section class="sec">
+          <h1>도서 목록 조회</h1>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">ID</li>
+            <li class="list-group-item">번호</li>
+            <li class="list-group-item">제목</li>
+            <li class="list-group-item">내용</li>
+            <li class="list-group-item">장르</li>
+            <li class="list-group-item">저자</li>
+            <li class="list-group-item">변경&삭제</li>
+          </ul>
+
+          <% for(let i=0; i<bookData.length; i++){ %>
+          <ul class="list-group views list-group-horizontal">
+            <li class="list-group-item"><%= bookData[i]._id %></li>
+            <li class="list-group-item"><%= bookData[i].number %></li>
+            <li class="list-group-item"><%= bookData[i].title %></li>
+            <li class="list-group-item"><%= bookData[i].content %></li>
+            <li class="list-group-item"><%= bookData[i].genre %></li>
+            <li class="list-group-item"><%= bookData[i].writer %></li>
+            <li class="list-group-item btn-group">
+              <a href="/update/<%= bookData[i]._id %>"><button type="button" class="btn btn-success" >변경</button></a>
+              <button type="button" class="btn btn-danger btn-delete" data-id="<%= bookData[i]._id %>">삭제</button>
+            </li>
+          </ul>
+          <% } %>
+      </section>
+    </div>
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script>
+      $('.btn-delete').click(function(){
+        let id = this.dataset.id;
+        $.ajax({
+          method:'delete',
+          url:'/delete',
+          data:{_id:id}
+        }).done((반환값)=>{
+          //아무거나
+        })
+        $(this).parents('ul').slideUp(100);
+      })
+    </script>
+</body>
+</html>
