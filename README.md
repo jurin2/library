@@ -37,9 +37,17 @@ app.get('/write',(req,res)=>{
 </code>
 </pre>
 
-2. ### 도서목록 조회, 삭제, 수정
+2. ### 도서목록 조회, 수정 삭제
 #### mongodb에 저장된 데이터를 조회페이지에 보여주고 데이터의 수정과 삭제를 가능하게 했습니다.
-![image](https://user-images.githubusercontent.com/89722981/165805992-3c530118-0437-4818-a1df-56d0fe3e3597.png)
+
+- ### mongodb 데이터베이스
+<img src="https://user-images.githubusercontent.com/89722981/165932644-fa809d67-2867-4dba-8f51-a4d187802f60.png" width="70%" alt="mongodb"/>
+
+- #### 도서목록 조회, 삭제
+<img src="https://user-images.githubusercontent.com/89722981/165805992-3c530118-0437-4818-a1df-56d0fe3e3597.png" width="100%" alt="도서목록 조회"/>
+  
+- #### 도서목록 수정
+<img src="https://user-images.githubusercontent.com/89722981/165933045-49adf348-c6f4-4ad7-985f-b271437864f4.png" width="100%" alt="도서목록 수정"/>  
 <pre>
 <code>
 // 글 삭제
