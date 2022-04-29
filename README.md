@@ -13,11 +13,11 @@ Node.js를 이용해 도서관의 도서목록 등록, 조회, 삭제, 수정 �
 <img src="https://img.shields.io/badge/HTML5-d35836?style=flat-square&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-3272b0?style=flat-square&logo=CSS3&logoColor=white"/> <img src="https://img.shields.io/badge/JAVASCRIPT-f4df52?style=flat-square&logo=JAVASCRIPT&logoColor=black"/> <img src="https://img.shields.io/badge/BOOTSTRAP-7a52b3?style=flat-square&logo=BOOTSTRAP&logoColor=white"/> <img src="https://img.shields.io/badge/Node.js-0c740a?style=flat-square&logo=Node.js&logoColor=white"/> <a href="https://github.com/jurin2/library/"><img src="https://img.shields.io/badge/GITHUB-171717?style=flat-square&logo=GITHUB&logoColor=white"/>
 <br><br>
 
-1. ### 도서목록등록
+### 1. 도서목록등록
 #### 도서목록 등록시 mongodb에 데이터 저장
 ![image](https://user-images.githubusercontent.com/89722981/165805936-59f776e1-ba60-4fcf-85a8-a90daba79301.png)
 
-2. ### 도서목록 조회, 수정 삭제
+### 2. 도서목록 조회, 수정 삭제
 #### mongodb에 저장된 데이터를 조회페이지에 보여주고 데이터의 수정과 삭제가 가능
 
 - ### mongodb 데이터베이스
