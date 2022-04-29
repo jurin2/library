@@ -10,7 +10,7 @@ Node.js를 이용해 도서관의 도서목록 등록, 조회, 삭제, 수정 �
 * nodemon
 
 ## 설명
-<img src="https://img.shields.io/badge/BOOTSTRAP-7a52b3?style=flat-square&logo=BOOTSTRAP&logoColor=white"/> <img src="https://img.shields.io/badge/Node.js-0c740a?style=flat-square&logo=Node.js&logoColor=white"/> <a href="https://github.com/jurin2/library/"><img src="https://img.shields.io/badge/GITHUB-171717?style=flat-square&logo=GITHUB&logoColor=white"/>
+<img src="https://img.shields.io/badge/HTML5-d35836?style=flat-square&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-3272b0?style=flat-square&logo=CSS3&logoColor=white"/> <img src="https://img.shields.io/badge/JAVASCRIPT-f4df52?style=flat-square&logo=JAVASCRIPT&logoColor=black"/> <img src="https://img.shields.io/badge/BOOTSTRAP-7a52b3?style=flat-square&logo=BOOTSTRAP&logoColor=white"/> <img src="https://img.shields.io/badge/Node.js-0c740a?style=flat-square&logo=Node.js&logoColor=white"/> <a href="https://github.com/jurin2/library/"><img src="https://img.shields.io/badge/GITHUB-171717?style=flat-square&logo=GITHUB&logoColor=white"/>
 <br><br>
 
 1. ### 도서목록등록
